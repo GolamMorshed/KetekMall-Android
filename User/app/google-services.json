@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "918843433379",
+    "firebase_url": "https://click-1595830894120.firebaseio.com",
+    "project_id": "click-1595830894120",
+    "storage_bucket": "click-1595830894120.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918843433379:android:d22a88ebb1d173893e3a16",
+        "android_client_info": {
+          "package_name": "com.example.click"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918843433379-1beejamig63h6p9p9td3o92ajfelb2df.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.click",
+            "certificate_hash": "d4670765f216d7a20904dbcf84a090d8bf6e09e3"
+          }
+        },
+        {
+          "client_id": "918843433379-peibcrv2fpkhhf88t2j0408qpa9b0m08.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.click",
+            "certificate_hash": "48d89710c18fff72144f9f6f6389c54e46a7842f"
+          }
+        },
+        {
+          "client_id": "918843433379-2q2r1j415vs16f6icer3n8up6gq023ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrWiEDJb4bU2LjO8uyh31D1eHFFHXjFJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918843433379-2q2r1j415vs16f6icer3n8up6gq023ri.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "918843433379-sttk0oa9ea0htiqt3j3ncakoi2vrma2i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ketekmall.ketekmall4"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918843433379:android:7ede1294015666343e3a16",
+        "android_client_info": {
+          "package_name": "com.ketekmall.ketekmall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918843433379-2q2r1j415vs16f6icer3n8up6gq023ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrWiEDJb4bU2LjO8uyh31D1eHFFHXjFJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918843433379-2q2r1j415vs16f6icer3n8up6gq023ri.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "918843433379-sttk0oa9ea0htiqt3j3ncakoi2vrma2i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ketekmall.ketekmall4"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

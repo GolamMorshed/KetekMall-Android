@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ketekmall.ketekmall"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+<!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+<!--    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+<!--    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="18" />-->
+
+    <application
+        android:allowBackup="true"
+        android:requestLegacyExternalStorage="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:replace="android:theme"
+        android:usesCleartextTraffic="true">
+        <meta-data android:name="com.onesignal.NotificationOpened.DEFAULT" android:value="DISABLE" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ketekmall.ketekmall.pages.Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:name="com.ipay.IPayIHActivity" android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.ipay.IPayIHAcitivityR" android:configChanges="orientation|screenSize"/>
+        <activity
+            android:name="com.ketekmall.ketekmall.pages.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ketekmall.ketekmall.pages.Homepage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.ketekmall.ketekmall.pages.seller.Product_Edit" />
+        <activity android:name="com.ketekmall.ketekmall.pages.navigation_items.transaction.Cart" />
+        <activity
+            android:name="com.ketekmall.ketekmall.user.Edit_Profile"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ketekmall.ketekmall.pages.buyer.Chat"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.ketekmall.ketekmall.pages.navigation_items.transaction.Checkout" />
+        <activity android:name="com.ketekmall.ketekmall.pages.navigation_items.transaction.Place_Order" />
+        <activity android:name="com.ketekmall.ketekmall.pages.buyer.MyLikes" />
+        <activity android:name="com.ketekmall.ketekmall.pages.seller.MyProducts" />
+        <activity android:name="com.ketekmall.ketekmall.pages.seller.Product_Add" />
+        <activity android:name="com.ketekmall.ketekmall.pages.buyer.Chat_Inbox" />
+        <activity android:name="com.ketekmall.ketekmall.pages.product_details.View_Product" />
+        <activity android:name="com.ketekmall.ketekmall.pages.product_details.About_Seller" />
+        <activity android:name="com.ketekmall.ketekmall.user.Edit_Profile_Address" />
+        <activity android:name="com.ketekmall.ketekmall.pages.register_seller.Register_Seller_MainPage" />
+        <activity android:name="com.ketekmall.ketekmall.pages.register_seller.Register_Seller" />
+        <activity android:name="com.ketekmall.ketekmall.pages.product_details.More_Details" />
+        <activity android:name="com.ketekmall.ketekmall.pages.seller.Selling_Detail" />
+        <activity android:name="com.ketekmall.ketekmall.pages.product_details.Review_Info" />
+        <activity android:name="com.ketekmall.ketekmall.pages.Notification_Page" />
+        <activity android:name="com.ketekmall.ketekmall.pages.buyer.Review_Page" />
+
+        <activity android:name="com.ketekmall.ketekmall.pages.buyer.MyBuying" />
+        <activity android:name="com.ketekmall.ketekmall.pages.seller.MySelling" />
+        <activity android:name="com.ketekmall.ketekmall.pages.Me_Page" />
+        <activity android:name="com.ketekmall.ketekmall.pages.seller.MyIncome" />
+        <activity android:name="com.ketekmall.ketekmall.pages.buyer.MyRating" />
+        <activity android:name="com.ketekmall.ketekmall.pages.seller.BoostAd" />
+        <activity android:name="com.ketekmall.ketekmall.pages.seller.ProductRating" />
+        <activity android:name="com.ketekmall.ketekmall.pages.navigation_items.Contact_Us" />
+        <activity android:name="com.ketekmall.ketekmall.pages.navigation_items.About_KetekMall" />
+        <activity android:name="com.ketekmall.ketekmall.pages.navigation_items.ReturnRefundPolicy" />
+        <activity android:name="com.ketekmall.ketekmall.pages.navigation_items.DeliveryPolicy" />
+        <activity android:name="com.ketekmall.ketekmall.pages.register_seller.TermsAndConditions" />
+        <activity android:name="com.ketekmall.ketekmall.pages.navigation_items.TermsAndConditionsOnly" />
+        <activity android:name=".pages.navigation_items.Chat_Inbox_Homepage" />
+        <activity android:name=".pages.navigation_items.AppVersion" />
+        <activity android:name=".user.Login" />
+        <activity android:name=".user.Forgot_Password" />
+        <activity android:name=".user.Register" />
+        <activity android:name=".pages.View_Category" />
+        <activity android:name=".PosLajuTestAreaStage" />
+        <activity android:name=".pages.View_Shocking_Sale" />
+        <activity android:name=".pages.navigation_items.Chat" />
+
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:value="@array/preloaded_fonts" />
+
+        <service android:name="com.ketekmall.ketekmall.service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.ketekmall.ketekmall.service.MyFirebaseMessagingService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

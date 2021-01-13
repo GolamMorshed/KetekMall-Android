@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@mipmap/background_white_full_curves03"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/bookmark_item"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:background="@mipmap/ic_expand_01_foreground"
+                    android:contentDescription="@string/item_image"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_item"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:contentDescription="@string/item_image"
+                    android:paddingTop="5dp"
+                    android:scaleType="centerCrop"
+                    tools:srcCompat="@tools:sample/avatars[1]" />
+
+                <ImageButton
+                    android:visibility="gone"
+                    android:id="@+id/add_to_cart_item"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@mipmap/ic_love_foreground"
+                    android:contentDescription="@string/item_image" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/ad_details_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:paddingStart="10dp"
+                android:paddingTop="0dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="0dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/ad_details"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:paddingStart="0dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="5dp"
+                android:rating="0"
+                android:theme="@style/MyRatingBar" />
+
+            <TextView
+                android:id="@+id/price_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:paddingStart="10dp"
+                android:paddingTop="0dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:text="@string/price_rm"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/item_location_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:paddingStart="10dp"
+                android:paddingTop="0dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/division"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/fav_item"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:gravity="center"
+                        android:id="@+id/view_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@mipmap/view_border_orange"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textColor="@color/colorWhite"
+                        android:text="@string/add_to_cart"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <ImageButton
+                    android:id="@+id/fav_item"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@mipmap/ic_love_unfilled_foreground"
+                    android:contentDescription="@string/item_image" />
+
+                <ImageButton
+                    android:id="@+id/fav_item_filled"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"
+                    android:background="@mipmap/ic_love_filled_foreground"
+                    android:contentDescription="@string/item_image" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
